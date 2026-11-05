@@ -2,20 +2,20 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22945292.svg)](https://doi.org/10.5281/zenodo.22945292)
 
-**82,109 kaomoji (Japanese text emoticons), with semantic labels in 6 languages.**
+**82,102 kaomoji (Japanese text emoticons), with semantic labels in 6 languages.**
 
 Browse and copy them at **[fontvibe.ai/tools/kaomoji](https://fontvibe.ai/tools/kaomoji)**
 — one click to copy, no install. The English page carries the 11,020 that render safely
 outside Japanese contexts; the Japanese page,
 **[顔文字一覧](https://fontvibe.ai/ja/tools/kaomoji)**, carries the whole corpus.
-This repo is the raw data behind both; every one of the 82,109 is in it.
+This repo is the raw data behind both; every one of the 82,102 is in it.
 
 Every publicly available kaomoji dataset we could find is covered here at **97.8–100%**,
 and the few entries that aren't are ones we deliberately exclude. You don't have to take
 our word for any of it — [a script checks it against the live upstream files](#coverage).
 
 ```
-82,109   kaomoji
+82,102   kaomoji
 69,679   with semantic labels (emotion / intent / subject) in en · ja · zh · es · pt · de
    106   original kaomoji, designed for feelings that had no kaomoji before
     52   categories
@@ -163,13 +163,14 @@ that's the fastest way for us to find out.
 
 | File | Entries | Size | Use it for |
 |---|---:|---:|---|
-| `data/core.json` | 10,842 | 8.3 MB | **Start here.** Faces only, no Japanese dialogue — safest outside Japanese contexts |
+| `data/core.json` | 10,835 | 8.3 MB | **Start here.** Faces only, no Japanese dialogue — safest outside Japanese contexts |
 | `data/extended.json` | 168 | 0.2 MB | Nearly pure faces |
 | `data/mixed.json` | 29,209 | 25 MB | Face plus a short Japanese phrase |
 | `data/verbose.json` | 41,890 | 35 MB | The Japanese 顔文字＋セリフ tradition — face plus a full line of dialogue |
-| `data/kaomoji.jsonl.gz` | 82,109 | 4.7 MB | Everything, one JSON object per line |
-| `data/kaomoji.csv` | 82,109 | 6.6 MB | `text,keywords`, **no header row** — drop-in shape for rofimoji-style pickers |
+| `data/kaomoji.jsonl.gz` | 82,102 | 4.7 MB | Everything, one JSON object per line |
+| `data/kaomoji.csv` | 82,102 | 6.6 MB | `text,keywords`, **no header row** — drop-in shape for rofimoji-style pickers |
 | `data/originals.json` | 106 | 0.1 MB | The original ones |
+| `data/picker.json` | 8,796 | 1.1 MB | For character pickers: `text`, `group` (one of 10) and English `keywords`. Every entry has keywords |
 | `data/stats.json` | — | — | Counts, machine-readable |
 
 Tiers are assigned by how much of an entry consists of characters that appear in
@@ -239,7 +240,7 @@ BibTeX:
   year         = {2026},
   version      = {1.0.6},
   howpublished = {\url{https://fontvibe.ai/tools/kaomoji}},
-  note         = {82,109 kaomoji with semantic labels in six languages. CC BY 4.0}
+  note         = {82,102 kaomoji with semantic labels in six languages. CC BY 4.0}
 }
 ```
 

@@ -61,7 +61,7 @@ as facial features *and* as onomatopoeia, and no rule based on character class s
 
 | Tier | Count | Coverage | What it means |
 |---|---:|---|---|
-| `core` | 10,842 | 100% | Face only. Safe anywhere. |
+| `core` | 10,835 | 100% | Face only. Safe anywhere. |
 | `extended` | 168 | ≥95% | Almost pure face. |
 | `mixed` | 29,209 | ≥80% | Face plus a short Japanese phrase. |
 | `verbose` | 41,890 | <80% | The 顔文字＋セリフ tradition — face plus a full line of Japanese dialogue. |

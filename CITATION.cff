@@ -6,7 +6,7 @@ authors:
   - name: "FontVibe"
     website: "https://fontvibe.ai"
 abstract: >-
-  82,109 kaomoji (Japanese text emoticons) merged from seven independent source
+  82,102 kaomoji (Japanese text emoticons) merged from seven independent source
   families, with semantic labels (emotion / intent / subject) in six languages
   (English, Japanese, Chinese, Spanish, Portuguese, German) on 69,679 of them,
   a four-level tier split by rendering safety outside Japanese contexts, and
@@ -24,5 +24,5 @@ license: CC-BY-4.0
 url: "https://fontvibe.ai/tools/kaomoji"
 repository-code: "https://github.com/Funovate/fontvibe-kaomoji"
 doi: "10.5281/zenodo.22945292"
-version: "1.0.7"
+version: "1.0.8"
 date-released: "2026-09-25"

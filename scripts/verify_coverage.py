@@ -30,14 +30,13 @@ def fetch(url, encoding=None):
 
 def rofimoji():
     t = fetch(f"{GH}/fdw/rofimoji/main/src/picker/data/kaomoji.csv")
-    pat = re.compile(r"^(.*?)[ \t]+((?:[a-z][a-z\-]*)(?:,[ ]*[a-z][a-z\-]*)*)$")
+    # Format: the first plain space ends the kaomoji (inner spaces are NBSP, text is HTML-escaped).
     out = []
     for line in t.splitlines():
         if not line.strip():
             continue
-        m = pat.match(line.rstrip())
-        out.append((m.group(1).strip() if m else line.rstrip()))
-    return [x for x in out if x]
+        out.append(html.unescape(line.split(" ", 1)[0]))
+    return out
 
 
 def kaomoji_proj():
