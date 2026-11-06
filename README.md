@@ -170,7 +170,7 @@ that's the fastest way for us to find out.
 | `data/kaomoji.jsonl.gz` | 82,102 | 4.7 MB | Everything, one JSON object per line |
 | `data/kaomoji.csv` | 82,102 | 6.6 MB | `text,keywords`, **no header row** — drop-in shape for rofimoji-style pickers |
 | `data/originals.json` | 106 | 0.1 MB | The original ones |
-| `data/picker.json` | 8,796 | 1.1 MB | For character pickers: `text`, `group` (one of 10) and English `keywords`. Every entry has keywords |
+| `data/picker.json` | 8,843 | 1.1 MB | For character pickers: `text`, `group` (one of 10) and English `keywords`. Every entry has keywords |
 | `data/stats.json` | — | — | Counts, machine-readable |
 
 Tiers are assigned by how much of an entry consists of characters that appear in
