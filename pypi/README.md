@@ -1,6 +1,6 @@
 # kaomoji-dataset
 
-**82,109 kaomoji** (Japanese text emoticons) with emotion, intent and subject labels in
+**82,102 kaomoji** (Japanese text emoticons) with emotion, intent and subject labels in
 **six languages** — English, Japanese, Chinese, Spanish, Portuguese and German.
 No dependencies. 4.8 MB installed.
 
@@ -33,7 +33,7 @@ kaomoji-dataset --categories
 ## Why this instead of the other kaomoji packages
 
 Most kaomoji packages ship a few hundred entries hard-coded in one file, keyed by an English
-word. This one is a **corpus**: 82,109 entries merged from 7 independent source families —
+word. This one is a **corpus**: 82,102 entries merged from 7 independent source families —
 four open-source projects, 20 Japanese IME dictionaries, a web collection and our own earlier
 library — deduplicated, and labelled so you can query it by *meaning* rather than by
 remembering which English word the author happened to pick.
@@ -64,7 +64,7 @@ Every function returns plain `dict`s in the schema below — nothing to unwrap.
 
 ### Cost
 
-The dataset ships gzipped and is parsed on first access, then cached. For the full 82,109,
+The dataset ships gzipped and is parsed on first access, then cached. For the full 82,102,
 measured on CPython 3.14 / Apple silicon: **~0.7 s** and **about 540 MB RSS**. That is not a
 small amount of memory; budget for it before you import this inside a worker. Every call
 after the first is free, so if you only need a handful of faces at import time, call

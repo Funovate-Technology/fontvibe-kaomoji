@@ -19,7 +19,7 @@ import random as _random
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-__version__ = "1.0.6"
+__version__ = "1.0.9"
 
 LANGS = ("en", "zh", "ja", "es", "pt", "de")
 
