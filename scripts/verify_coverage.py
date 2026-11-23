@@ -28,14 +28,20 @@ def fetch(url, encoding=None):
     return raw.decode("utf-8", "replace")
 
 
+ROFIMOJI_GROUPS = ["activities", "angry", "animals", "happy", "love",
+                   "other", "sad", "shy", "surprised", "tableflip"]
+
+
 def rofimoji():
-    t = fetch(f"{GH}/fdw/rofimoji/main/src/picker/data/kaomoji.csv")
+    # Since PR #247 (2026-11-08) the data is split into kaomoji_<group>.csv.
     # Format: the first plain space ends the kaomoji (inner spaces are NBSP, text is HTML-escaped).
     out = []
-    for line in t.splitlines():
-        if not line.strip():
-            continue
-        out.append(html.unescape(line.split(" ", 1)[0]))
+    for g in ROFIMOJI_GROUPS:
+        t = fetch(f"{GH}/fdw/rofimoji/main/src/picker/data/kaomoji_{g}.csv")
+        for line in t.splitlines():
+            if not line.strip():
+                continue
+            out.append(html.unescape(line.split(" ", 1)[0]))
     return out
 
 
@@ -51,7 +57,10 @@ def kaomoji_proj():
 
 def emoji_nvim():
     j = json.loads(fetch(f"{GH}/Allaman/emoji.nvim/main/lua/data/kaomojis.json"))
-    return [x for items in j.values() for x in items if isinstance(x, str)]
+    # Since PR #62 (2026-11-22) an item is either a plain string or {"character", "keywords"}.
+    return [x if isinstance(x, str) else x["character"]
+            for items in j.values() for x in items
+            if isinstance(x, str) or (isinstance(x, dict) and "character" in x)]
 
 
 def rime():
