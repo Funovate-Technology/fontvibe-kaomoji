@@ -64,8 +64,8 @@ Output as of the current release:
 
 | Source | Entries | Covered | Not covered |
 |---|---:|---:|---:|
-| [fdw/rofimoji](https://github.com/fdw/rofimoji) — largest English-side set, 1.1k★ | 1,562 | **100.0%** | 0 |
-| [Allaman/emoji.nvim](https://github.com/Allaman/emoji.nvim) | 2,016 | **99.9%** | 3 |
+| [fdw/rofimoji](https://github.com/fdw/rofimoji) — 1.1k★, ships this dataset since Nov 2026 | 8,796 | **100.0%** | 0 |
+| [Allaman/emoji.nvim](https://github.com/Allaman/emoji.nvim) | 2,016 | **99.9%** | 2 |
 | [aoguai/rime_kaomoji_dict](https://github.com/aoguai/rime_kaomoji_dict) | 959 | **99.4%** | 6 |
 | [mtripg6666tdr/Kaomoji_proj](https://github.com/mtripg6666tdr/Kaomoji_proj) (MIT) | 2,166 | **97.8%** | 48 |
 | Japanese IME dictionaries (kaomoji.com + Vector, 20 files) | 77,086 | 100% | 0 |
@@ -76,7 +76,7 @@ Output as of the current release:
 > their numbers come from the same merge run and can be reproduced by re-running the
 > collection pipeline. The four GitHub sources above are checked live, every run.
 >
-> `cspeterson/splatmoji` is byte-identical to rofimoji's data upstream, so it isn't listed separately.
+> `cspeterson/splatmoji` is byte-identical to rofimoji's earlier data, which this dataset fully covers, so it isn't listed separately.
 
 ### Why it isn't 100%
 
